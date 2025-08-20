@@ -2,20 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TV Show Project | Jennifer Isidienu (JenniferIsidienu)</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <div id="root">
-    </div>
+    <section id="searchControls">
+      <label for="episodeDropdown" class="visually-hidden"></label>
+      <select id="episodeDropdown" class="episode-dropdown"></select>
+      <input
+        type="text"
+        id="keywordInput"
+        class="keyword-input"
+        placeholder="Search by keyword or episode code..."
+      />
+      <span id="episodeCount"></span>
+    </section>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+    <div id="root"></div>
 
-    <!-- Loads YOUR javascript code -->
+    <template id="dropdownOptionTemplate">
+      <option value=""></option>
+    </template>
+
+    <template id="episodeTemplate">
+      <div class="episode-card">
+        <a href="#" target="_blank" rel="noopener">
+          <div class="episode-header shadow-box">
+            <span class="episode-name-and-code"></span>
+          </div>
+          <img src="" alt="TV Show Image" />
+        </a>
+        <div class="episode-summary"></div>
+      </div>
+    </template>
+
+    <footer>
+      Data originally from
+      <a href="https://tvmaze.com/" target="_blank" rel="noopener"
+        >TVMaze.com</a
+      >
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
