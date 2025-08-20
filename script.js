@@ -28,4 +28,5 @@ function makePageForEpisodes(episodeList) {
   rootElem.appendChild(footer);
 }
 
+
 window.onload = setup;
