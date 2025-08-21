@@ -169,3 +169,4 @@ function showView(showList) {
 }
 
 window.onload = setup;
+

@@ -4,44 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TV Show Project | Jennifer Isidienu (JenniferIsidienu)</title>
-    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <div id="root"><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TV Show Project | Jennifer Isidienu</title>
-  <link href="style.css" rel="stylesheet" />
-</head>
-<body>
-  <header>
-    <h1>TV Shows Explorer</h1>
-  </header>
-
-  <!-- Containers for dynamic content -->
-  <main>
-    <div id="showsContainer"></div>
-    <div id="episodesContainer" class="hidden"></div>
-  </main>
-
-  <footer>
-    Data originally from <a href="https://tvmaze.com" target="_blank" rel="noopener">TVMaze.com</a>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+    <div id="showSearchContainer" class="search-controls">
+      <input type="text" id="showSearch" placeholder="Search shows..." />
     </div>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+    <div id="showsContainer"></div>
 
-    <!-- Loads YOUR javascript code -->
+    <div id="episodesContainer" class="hidden">
+      <div id="episodeSearchControls" class="search-controls">
+        <button id="backToShowsBtn">← Back to Shows</button>
+        <select id="episodeDropdown"></select>
+        <input
+          type="text"
+          id="episodeSearch"
+          placeholder="Search episodes..."
+        />
+        <span id="episodeCount"></span>
+      </div>
+      <div id="episodesList"></div>
+    </div>
+
+    <template id="episodeTemplate">
+      <div class="episode-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <div class="episode-header shadow-box">
+            <span class="episode-name-and-code"></span>
+          </div>
+          <img src="" alt="" />
+        </a>
+        <div class="episode-summary"></div>
+      </div>
+    </template>
+
     <script src="script.js"></script>
   </body>
 </html>
