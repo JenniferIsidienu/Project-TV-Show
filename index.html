@@ -10,11 +10,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>TV Show Project | Jennifer Isidienu (JenniferIsidienu)</title>
+
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="style.css" />
   
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
   </head>
   <body>
+
+    <section id="searchControls">
+      <label for="showsDropdown" class="visually-hidden">Select a Show</label>
+      <select id="showsDropdown" class="episode-dropdown"></select>
+      <select id="episodeDropdown" class="episode-dropdown"></select>
+      <label for="keywordInput" class="visually-hidden">Search Episodes</label>
+      <input
+        type="text"
+        id="keywordInput"
+        class="keyword-input"
+        placeholder="Search by keyword..."
+      />
+      <span id="episodeCount">Showing all episodes</span>
+      <button id="backToShowsBtn" style="display: none;">Back to Shows</button>
+    </section>
+    <div id="root"></div>
+    <!-- Dropdown shows template -->
+    <template id="dropdownShowsTemplate">
+      <option value=""></option>
+    </template>
+    <!-- Dropdown episodes template -->
+    <template id="dropdownEpisodeTemplate">
+      <option value=""></option>
+    </template>
+    <!-- Show template -->
+    <template id="showTemplate">
+      <div class="show-card">
+        <a href="#" target="_blank" rel="noopener">
+          <div class="show-header shadow-box">
+            <span class="show-name"></span>
+          </div>
+          <img src="" alt="Show Image" />
+        </a>
+        <div class="show-summary"></div>
+      </div>
+    </template>
+    <!-- Episode template -->
     <section id=“searchControls”>
       <label for=“showsDropdown” class=“visually-hidden”>Select a Show</label>
       <select id=“showsDropdown” class=“episode-dropdown”></select>
@@ -103,11 +145,20 @@
           <img src="" alt="TV Show Image" />
 
         </a>
+        <div class="episode-summary"></div>
+
+
+        </a>
         <div class=“episode-summary”></div>
+
       </div>
     </template>
     <footer>
       Data originally from
+
+      <a href="https://tvmaze.com/" target="_blank" rel="noopener">TVMaze.com</a>
+    </footer>
+
       <a href=“https://tvmaze.com/” target=“_blank” rel=“noopener”
         >TVMaze.com</a
       >
@@ -121,6 +172,7 @@
       >
     </footer>
     <script src="episodes.js"></script>
+
 
     <script src="script.js"></script>
   </body>
