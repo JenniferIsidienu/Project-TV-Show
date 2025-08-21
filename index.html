@@ -3,11 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | Jennifer Isidienu</title>
-    <link href="style.css" rel="stylesheet" />
+
+    <title>TV Show Project | Jennifer Isidienu (JenniferIsidienu)</title>
+    <link rel="stylesheet" href="style.css" />
+  
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+
+    <div id="showSearchContainer" class="search-controls">
+      <input type="text" id="showSearch" placeholder="Search shows..." />
+    </div>
+
+    <div id="showsContainer"></div>
+
+    <div id="episodesContainer" class="hidden">
+      <div id="episodeSearchControls" class="search-controls">
+        <button id="backToShowsBtn">← Back to Shows</button>
+        <select id="episodeDropdown"></select>
+        <input
+          type="text"
+          id="episodeSearch"
+          placeholder="Search episodes..."
+        />
+        <span id="episodeCount"></span>
+      </div>
+      <div id="episodesList"></div>
+    </div>
+
+    <template id="episodeTemplate">
+      <div class="episode-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <div class="episode-header shadow-box">
+            <span class="episode-name-and-code"></span>
+          </div>
+          <img src="" alt="" />
+          
     <section id="searchControls">
       <label for="episodeDropdown" class="visually-hidden"></label>
       <select id="episodeDropdown" class="episode-dropdown"></select>
@@ -32,10 +63,12 @@
             <span class="episode-name-and-code"></span>
           </div>
           <img src="" alt="TV Show Image" />
+
         </a>
         <div class="episode-summary"></div>
       </div>
     </template>
+          
     <footer>
       Data originally from
       <a href="https://tvmaze.com/" target="_blank" rel="noopener"
@@ -43,6 +76,7 @@
       >
     </footer>
     <script src="episodes.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
