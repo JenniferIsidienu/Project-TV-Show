@@ -37,15 +37,49 @@ body {
   box-shadow: 0 4px 8px rgba(250, 100, 100, 0.1);
 }
 
+/* Show cards */
+.show-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.show-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.show-header {
+  padding: 0.75rem;
+  background: #1E1E1E;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.show-summary {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+/* Episode cards */
+.episode-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .episode-card img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 .episode-header {
   padding: 0.75rem;
-  background: #1f0909;
+  background: #1E1E1E;
+
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -55,7 +89,6 @@ body {
 .shadow-box {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
-
 .episode-summary {
   padding: 0.75rem;
   font-size: 0.9rem;
@@ -65,5 +98,19 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1rem;
-  font-size: 0.9rem;
+
+  font-size: 1rem
+}
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+#episodeDropdown,
+#episodeCount {
+  display: none;
+
+  }
 }
